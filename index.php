@@ -2,4 +2,6 @@
 
 echo "Teste";
 
+echo "Testando";
+
 ?>
