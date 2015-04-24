@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Festas</title>
+        <link href='http://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/base-min.css">
+        <style type="text/css">
+            body {
+                background: url('layout/background.jpg') repeat;
+            }
+
+            header {
+                font-family: 'Londrina Shadow', cursive;
+		  box-shadow: 4px 7px 12px;
+		  width: 99%;
+		  padding: 10px;
+            }
+
+            header h1 {
+                margin-left: 30px;
+                font-size: 90px;
+            }
+
+            header h2 {
+                margin-right: 10px;
+                font-size: 30px;
+                text-align: right;
+            }
+
+	    .formContainer {
+		max-width: 460px;
+    		min-height: 400px;
+      	        background-color: black;
+                opacity: 0.4;
+                margin: 0 auto;
+	    }
+
+	    .formContainer > input {
+		margin-left: 25%;
+                margin-top: 20px;
+	    }
+
+	    .formContainer > textarea {
+		display: block;
+		margin-left: 15%;
+                margin-top: 20px;
+		width: 67%;
+		height: 127px;
+		resize: none;
+	    }
+	    
+	    formContainer > input:first-child {
+		margin-left: 15%;
+		margin-top: 20px;
+		width: 67%;
+	    }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>
+                BMO
+            </h1>
+            <h2>
+                Participe de festas mais legais e seja um super BMO
+            </h2>
+        </header>
+
+    	<form class="formContainer">
+
+	 <input type="text" placeholder="Nome">
+
+         <input type="file" placeholder="Escolha sua imagem.">
+
+      	 <input type="date" placeholder="Data">
+	 
+	 <textarea placeholder="Descrição"></textarea>
+    	</form>
+    
+    </body>
+</html>
