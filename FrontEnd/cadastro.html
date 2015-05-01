@@ -16,15 +16,12 @@
             </h2>
         </header>
 
-    	<form class="formContainer">
-
-	 <input type="text" placeholder="Nome">
-
-         <input type="file" style="color: red;">
-
-      	 <input type="date" placeholder="Data">
-	 
-	 <textarea placeholder="Descrição"></textarea>
+    	<form class="formContainer" method="post" action="includes/cadastro.php">
+            <input type="text" placeholder="Nome" name="nome">
+            <input type="file" style="color: red;" name="arquivo">
+      	    <input type="date" placeholder="Data" name="data">
+	        <textarea placeholder="Descrição" name="descricao"></textarea>
+            <input type="submit" value="Cadastrar">
     	</form>
     
     </body>
