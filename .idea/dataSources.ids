@@ -10,8 +10,8 @@
     <table name="festa" schema="" catalog="bmo" type="TABLE">
       <column name="idfesta" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="descricao" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
-      <column name="dataFesta" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
-      <column name="foto" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="dataFesta" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="foto" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
       <column name="nomeEvento" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="idfesta"/>
     </table>
