@@ -1,3 +1,4 @@
+<h3 class="cadastro">Cadastre sua Festa</h3>
 <form class="formContainer" enctype="multipart/form-data" method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
     <input type="text" placeholder="Nome" name="nome">
     <input type="file" style="color: red;" name="arquivo">

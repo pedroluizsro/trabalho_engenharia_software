@@ -1,8 +1,8 @@
 <header>
     <h1>
-        BMO
+        <a href="index.php">BMO</a>
     </h1>
     <h2>
-        Participe de festas mais legais e seja um super BMO
+        <a href="cadastro.php">Divulgue sua festa e seja um super BMO</a>
     </h2>
 </header>
