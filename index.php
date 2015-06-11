@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Festas</title>
     <link href='http://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="styles/pure-min.css">
