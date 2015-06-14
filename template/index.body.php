@@ -7,7 +7,7 @@
     }
     foreach($resultado as $resultados) {
     ?>
-    <a class="card" href="#">
+    <a class="card">
         <article>
             Nome: <?php echo $resultados['nomeEvento']; ?><br>
             Data: <?php echo $resultados['dataFesta']; ?><br>
