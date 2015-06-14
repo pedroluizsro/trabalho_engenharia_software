@@ -12,7 +12,7 @@
             Nome: <?php echo $resultados['nomeEvento']; ?><br>
             Data: <?php echo $resultados['dataFesta']; ?><br>
         </article>
-        <img class="pure-img" src="<?php echo $resultados['foto']; ?>" style="opacity: 1;">
+        <img class="pure-img" src="<?php echo $resultados['foto']; ?>" style="opacity: 1; min-width: 100%">
     </a>
     <?php
     }

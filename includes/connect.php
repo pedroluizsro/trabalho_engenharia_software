@@ -5,8 +5,8 @@ header('Content-Type: text/html; charset=utf-8');
 
 ### DADOS DE CONEXÃO AO MYSQL ###
 $host = "localhost";
-$usuario = "root";
-$senha = "369258147";
+$usuario = "bmo";
+$senha = "bmo369";
 $base = "bmo";
 #################################
 

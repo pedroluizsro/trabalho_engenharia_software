@@ -27,20 +27,26 @@ if($_POST['nome'] != '' && $_POST['data'] != '' && $_FILES['arquivo']['name'] !=
     $descricao = $_POST['descricao'];
     $hashArquivo = md5((mt_rand(1,99))*(mt_rand(1,99))*(mt_rand(1,99)));
 
-    /**
-     * $ext - Extenção do Arquivo.
-     * $destino - Destino do arquivo já com o seu nome randômico.
-     * $arquivo_tmp - Nome do arquivo temporário que será movido.
-     * move_uploaded_file() - Função que irá mover o arquivo para o diretório.
-     */
-
     $ext = strtolower(substr($_FILES['arquivo']['name'],-4));
-    $destino = 'images/' . $hashArquivo . $ext;
-    $arquivo_tmp = $_FILES['arquivo']['tmp_name'];
-    move_uploaded_file($arquivo_tmp,$destino);
 
-    $sqlQuery = mysql_query("INSERT INTO festa (`descricao`,`dataFesta`,`foto`,`nomeEvento`) VALUES ('$descricao',now(),'$destino','$nome')", $conexao);
+    if($ext == '.jpg' || $ext == '.jpeg' || $ext == '.png' || $ext == '.gif'){
+        $destino = 'images/' . $hashArquivo . $ext;
+        $arquivo_tmp = $_FILES['arquivo']['tmp_name'];
+        move_uploaded_file($arquivo_tmp,$destino);
 
+        $sqlQuery = mysql_query("INSERT INTO festa (`descricao`,`dataFesta`,`foto`,`nomeEvento`) VALUES ('$descricao','$data','$destino','$nome')", $conexao);
+        $verificacao = 1;
+
+    } else {
+        echo "<script>alert('Não é uma imagem');</script>";
+    }
+
+}
+
+
+if($verificacao == 1){
+    echo "<script>alert('Cadastrou');</script>";
+    echo "<script>location.href='http://10.200.117.140/trabalho_engenharia_software/index.php'</script>";
 }
 
 ?>
