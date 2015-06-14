@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'Londrina Shadow';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Londrina Shadow'), local('LondrinaShadow-Regular'), url(LondrinaShadow-Regular.ttf) format('ttf'), url(http://fonts.gstatic.com/s/londrinashadow/v4/dNYuzPS_7eYgXFJBzMoKdf8mOSX00gsdbtRvMGBBXNY.woff) format('woff');
+}
+
+    
+body {
+    background: url('../layout/background.jpg') repeat;
+}
+
+header {
+    font-family: 'Londrina Shadow', cursive;
+    box-shadow: 4px 7px 12px;
+    width: 99%;
+    height: 115px;
+    padding: 10px;
+
+}
+
+header h1 {
+
+    margin-top: 0px;
+    margin-left: px;
+    font-size: 60px;
+
+}
+
+header h2 {
+
+    margin-top: -25px;
+    margin-right: 10px;
+    font-size: 30px;
+    text-align: right;
+
+}
+
+.cadastro {
+    font-family: 'Londrina Shadow', cursive;
+    font-size: 30px;
+    text-align: center;
+    color: #000000;
+}
+
+
+header a:link, a:visited {
+    color: #000000;
+    text-decoration: none
+}
+header a:hover {
+    color: #001bff
+}
+header a:active {
+    text-decoration: none
+}
+
+.masonry {
+    -moz-column-count: 2;
+    -moz-column-gap: 0px;
+    -webkit-column-count: 3;-webkit-column-gap: 0px;
+    column-count: 2;
+    column-gap: 0px;
+    margin-top: 20px;
+}
+
+.card {
+ margin-top: -10px;
+ position: relative;
+ width: 100%;
+ display: inline-block;
+ color: transparent;
+}
+
+
+.card:hover {
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+    color: black;
+}
+
+
+.card span {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding: 10px;
+    margin: 0px;
+    font-size: 20px;
+}
+
+.card article {
+    position: absolute;
+    top: 10%;
+    left: 4%;
+    font-weight: bold;
+    font-family: 'Londrina Shadow', cursive;
+    font-size: x-large;
+}
+
+.card img {
+    opacity: 1;
+}
+
+.formContainer {
+    max-width: 460px;
+    min-height: 400px;
+    background-color: black;
+    opacity: 0.4;
+    margin: 0 auto;
+}
+
+
+.formContainer > input {
+    margin-left: 25%;
+    margin-top: 20px;
+}
+
+
+.formContainer > textarea {display: block;margin-left: 15%;margin-top: 20px;width: 67%;height: 127px;
+    resize: none;
+}
+
+
+.formContainer > input:first-child {
+    margin-left: 15%;
+    margin-top: 20px;
+    width: 67%;
+}
+
+@media only screen and (max-width: 400px) {
+    .card span {
+        font-size: 15px;
+    }
+
+    .card article {
+        font-size: large;
+    }
+
+    header h2 {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 611px) {
+    .masonry {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+    header h2 {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .masonry {
+        -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
+    }
+}
