@@ -11,6 +11,7 @@
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <link rel="stylesheet" href="/resources/demos/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
     <script>
         $(function() {
             $( "#data" ).datepicker();
@@ -37,6 +38,7 @@ if($_POST['nome'] != '' && $_POST['data'] != '' && $_FILES['arquivo']['name'] !=
 
     $nome = $_POST['nome'];
     $data = $_POST['data'];
+    $cor_texto = $_POST['cor_texto'];
     $descricao = $_POST['descricao'];
     $hashArquivo = md5((mt_rand(1,99))*(mt_rand(1,99))*(mt_rand(1,99)));
     $ip = $_SERVER['REMOTE_ADDR'];
@@ -47,7 +49,7 @@ if($_POST['nome'] != '' && $_POST['data'] != '' && $_FILES['arquivo']['name'] !=
         $arquivo_tmp = $_FILES['arquivo']['tmp_name'];
         move_uploaded_file($arquivo_tmp,$destino);
 
-        $sqlQuery = mysql_query("INSERT INTO festa (`descricao`,`dataFesta`,`foto`,`nomeEvento`,`ip_criador`) VALUES ('$descricao','$data','$destino','$nome','$ip')", $conexao);
+        $sqlQuery = mysql_query("INSERT INTO festa (`descricao`,`dataFesta`,`foto`,`nomeEvento`,`ip_criador`,`cor_texto`) VALUES ('$descricao','$data','$destino','$nome','$ip','$cor_texto')", $conexao);
         $verificacao = 1;
 
     } else {
