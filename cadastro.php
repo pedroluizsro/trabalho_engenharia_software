@@ -3,6 +3,7 @@
 <head>
     <meta charset="ISO-8859-1">
     <title>Festas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="styles/pure-min.css">
     <link rel="stylesheet" href="styles/estilo.css">
@@ -10,6 +11,7 @@
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <link rel="stylesheet" href="/resources/demos/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
     <script>
         $(function() {
             $( "#data" ).datepicker();
@@ -36,9 +38,10 @@ if($_POST['nome'] != '' && $_POST['data'] != '' && $_FILES['arquivo']['name'] !=
 
     $nome = $_POST['nome'];
     $data = $_POST['data'];
+    $cor_texto = $_POST['cor_texto'];
     $descricao = $_POST['descricao'];
     $hashArquivo = md5((mt_rand(1,99))*(mt_rand(1,99))*(mt_rand(1,99)));
-
+    $ip = $_SERVER['REMOTE_ADDR'];
     $ext = strtolower(substr($_FILES['arquivo']['name'],-4));
 
     if($ext == '.jpg' || $ext == '.jpeg' || $ext == '.png' || $ext == '.gif'){
@@ -46,7 +49,7 @@ if($_POST['nome'] != '' && $_POST['data'] != '' && $_FILES['arquivo']['name'] !=
         $arquivo_tmp = $_FILES['arquivo']['tmp_name'];
         move_uploaded_file($arquivo_tmp,$destino);
 
-        $sqlQuery = mysql_query("INSERT INTO festa (`descricao`,`dataFesta`,`foto`,`nomeEvento`) VALUES ('$descricao','$data','$destino','$nome')", $conexao);
+        $sqlQuery = mysql_query("INSERT INTO festa (`descricao`,`dataFesta`,`foto`,`nomeEvento`,`ip_criador`,`cor_texto`) VALUES ('$descricao','$data','$destino','$nome','$ip','$cor_texto')", $conexao);
         $verificacao = 1;
 
     } else {
@@ -58,7 +61,7 @@ if($_POST['nome'] != '' && $_POST['data'] != '' && $_FILES['arquivo']['name'] !=
 
 if($verificacao == 1){
     echo "<script>alert('Cadastrou');</script>";
-    echo "<script>location.href='http://10.200.117.140/trabalho_engenharia_software/index.php'</script>";
+    echo "<script>location.href='http://www.projetobmo.cf/index.php'</script>";
 }
 
 ?>
